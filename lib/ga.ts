@@ -16,7 +16,6 @@ export const logWebVitals = (metric: any) => {
   ReactGA.timing({
     category: 'Web Vitals',
     variable: metric.name,
-    value: metric.name === 'CLS' ? metric.value * 1000 : metric.value,
-    label: metric.label
+    value: metric.name === 'CLS' ? metric.value * 1000 : metric.value
   })
 }
