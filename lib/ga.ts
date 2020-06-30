@@ -17,6 +17,6 @@ export const logWebVitals = (metric: any) => {
     category: 'Web Vitals',
     variable: metric.name,
     value: metric.name === 'CLS' ? metric.value * 1000 : metric.value,
-    label: window.location.pathname
+    label: metric.label
   })
 }
