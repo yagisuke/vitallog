@@ -1,9 +1,10 @@
 import { AppProps } from 'next/app'
-import { logWebVitals } from "../lib/ga"
+import { initGA, logWebVitals } from "../lib/ga"
 import '../styles/index.css'
 
+initGA()
+
 export function reportWebVitals(metric: any) {
-  console.log(metric)
   logWebVitals(metric)
 }
 

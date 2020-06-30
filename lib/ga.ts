@@ -10,9 +10,10 @@ export const logPageView = () => {
 }
 
 export const logWebVitals = (metric: any) => {
+  console.log(metric)
   ReactGA.timing({
     category: 'Web Vitals',
-    variable: name,
-    value: name === 'CLS' ? metric.value * 1000 : metric.value,
+    variable: metric.name,
+    value: metric.name === 'CLS' ? metric.value * 1000 : metric.value,
   })
 }
